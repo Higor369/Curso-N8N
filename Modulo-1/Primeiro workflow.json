@@ -1,0 +1,202 @@
+{
+  "name": "primeiro workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "formulario de contato",
+        "formDescription": "Entre em contato conosco",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Nome ",
+              "placeholder": "Seu Nome",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Idade ",
+              "fieldType": "number",
+              "placeholder": "Numero da sua idade ",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Cidade",
+              "placeholder": "Nome da sua cidade ",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Escolaridade",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Fundamental"
+                  },
+                  {
+                    "option": "Medio"
+                  },
+                  {
+                    "option": "Superior"
+                  }
+                ]
+              },
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "2e624c23-9783-4c82-b460-d7bdd3ad1fa4",
+      "name": "On form submission",
+      "webhookId": "9553403f-8dbe-4db8-ba5a-83d7fa91e0ab"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1zbHL4N6Jux2WTR8QEjrz003z7OCRYHDHPf9P1N1-Iys",
+          "mode": "list",
+          "cachedResultName": "N8N-fluxo1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zbHL4N6Jux2WTR8QEjrz003z7OCRYHDHPf9P1N1-Iys/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zbHL4N6Jux2WTR8QEjrz003z7OCRYHDHPf9P1N1-Iys/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nome": "=Nome do aluno :{{ $json['Nome '] }}",
+            "Idade": "={{ $json['Idade '] }}",
+            "Cidade": "={{ $json.Cidade }}",
+            "Escolaridade": "={{ $json.Escolaridade }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Nome",
+              "displayName": "Nome",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Idade",
+              "displayName": "Idade",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Cidade",
+              "displayName": "Cidade",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Escolaridade",
+              "displayName": "Escolaridade",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        208,
+        0
+      ],
+      "id": "f1921a82-2765-4c02-a209-f1572e0910c4",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "AWGZd5AFRIZHPxDM",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "higorpereirabarbosa@gmail.com",
+        "subject": "Formulario enviado ",
+        "message": "=Formulario respondido com nome  {{ $json.Nome }}, idade {{ $json.Idade  }} da cidade de {{ $json.Cidade }} e escolaridade {{ $json.Escolaridade }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "eebe59b8-5d4c-4940-95a2-8858ebc46827",
+      "name": "Send a message",
+      "webhookId": "d3bf83f2-ea1e-40c0-af6d-f9f5658e4074",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "BXdTYb9fdrC5jLPh",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f96760d5-11e5-429c-98a8-36e77ed5523a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "c747472b29fbd39357c55eab3d3bbdbeee1f5742fabbe89829cf1ce44a2051f4"
+  },
+  "id": "MG7CZlevlPCl3j7Q",
+  "tags": []
+}

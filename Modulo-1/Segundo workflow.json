@@ -1,0 +1,184 @@
+{
+  "name": "Segundo workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "1zbAPo7S8L2O_40l1niXOuhz1-CYS0GqpvSzexHveaOI",
+          "mode": "list",
+          "cachedResultName": "n8n fluxo2",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zbAPo7S8L2O_40l1niXOuhz1-CYS0GqpvSzexHveaOI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zbAPo7S8L2O_40l1niXOuhz1-CYS0GqpvSzexHveaOI/edit#gid=0"
+        },
+        "event": "rowAdded",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        -464,
+        -48
+      ],
+      "id": "2e00a2fb-0bf3-4c44-a4db-b85f0b6e8705",
+      "name": "Google Sheets Trigger",
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "7epgSROWY6gAcSqd",
+          "name": "Google Sheets Trigger account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C09G6V4BT4H",
+          "mode": "list",
+          "cachedResultName": "new-channel"
+        },
+        "text": "=um registro acabou de ser inserido:  {{ $json.nome }}",
+        "otherOptions": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        -256,
+        -48
+      ],
+      "id": "a7ef3e7d-c750-4681-8ab6-00ab152729f9",
+      "name": "Send a message",
+      "webhookId": "602683c3-ea7c-4f4e-93c5-b912372b0057",
+      "credentials": {
+        "slackOAuth2Api": {
+          "id": "GcdxEjgawrlB9bpV",
+          "name": "Slack account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Google Sheets Trigger').item.json.email }}",
+        "subject": "Teste fluxo 2",
+        "emailType": "text",
+        "message": "=um registro de teste  {{ $('Google Sheets Trigger').item.json.nome }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -48,
+        -48
+      ],
+      "id": "36f1e235-97e4-4049-a573-0ab8814d5612",
+      "name": "Send a message1",
+      "webhookId": "593d490f-9896-495e-8430-ad96f184120a",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "BXdTYb9fdrC5jLPh",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "familyName": "={{ $('Google Sheets Trigger').item.json.nome }}",
+        "givenName": "={{ $('Google Sheets Trigger').item.json['descrição'] }}",
+        "additionalFields": {
+          "emailsUi": {
+            "emailsValues": [
+              {
+                "type": "home",
+                "value": "={{ $('Google Sheets Trigger').item.json.email }}"
+              }
+            ]
+          },
+          "phoneUi": {
+            "phoneValues": [
+              {
+                "type": "mobile",
+                "value": "={{ $('Google Sheets Trigger').item.json.telefone }}"
+              }
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleContacts",
+      "typeVersion": 1,
+      "position": [
+        160,
+        -48
+      ],
+      "id": "157e5801-c66f-4a3a-8bfe-1b68fd069ced",
+      "name": "Create a contact",
+      "credentials": {
+        "googleContactsOAuth2Api": {
+          "id": "fjzJDKQpt5LxKYOD",
+          "name": "Google Contacts account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Google Sheets Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message1": {
+      "main": [
+        [
+          {
+            "node": "Create a contact",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "3cc731f9-7cb8-4a5c-908a-9f7b82cacb18",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "c747472b29fbd39357c55eab3d3bbdbeee1f5742fabbe89829cf1ce44a2051f4"
+  },
+  "id": "B89IfqxAjXyMioZ4",
+  "tags": []
+}
