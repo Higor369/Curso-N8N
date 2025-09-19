@@ -1,4 +1,4 @@
-# Workflows N8N - Curso Udemy
+# 🤖 Workflows N8N - Curso Udemy
 
 Coleção de workflows do N8N desenvolvidos durante o curso da Udemy.
 
@@ -12,31 +12,15 @@ docker-compose up -d
 # http://localhost:5678
 ```
 
-**Pronto!** Sem configuração adicional necessária.
-
 ## 📁 Workflows Incluídos
 
-### 1. Formulário de Contato
-**Arquivo:** `Modulo-1/primeiro workflow.json`
+### Módulo 1
+- **Formulário de Contato** (`Modulo-1/Primeiro workflow.json`)
+- **Monitoramento de Planilha** (`Modulo-1/Segundo workflow.json`)
 
-- 📝 Formulário web (Nome, Idade, Cidade, Escolaridade)
-- 📊 Salva dados no Google Sheets
-- 📧 Envia email de notificação
-
-### 2. Monitoramento de Planilha
-**Arquivo:** `Modulo-1/Segundo workflow.json`
-
-- 🔍 Monitora planilha Google Sheets
-- 💬 Notifica no Slack
-- 📧 Envia email personalizado
-- 👤 Cria contato no Google Contacts
-
-## 🔧 Tecnologias
-
-- **N8N** - Automação de workflows
-- **Google Sheets/Gmail/Contacts** - Integrações Google
-- **Slack** - Notificações
-- **Docker** - Execução local
+### Módulo 2
+- **Chatbot Telegram** (`Modulo-2/chatbot telegram simples.json`)
+- **Monitoramento Google Drive** (`Modulo-2/Google drive exercicio.json`)
 
 ## 📖 Como Importar
 
@@ -45,6 +29,14 @@ docker-compose up -d
 3. Selecione o arquivo `.json` desejado
 4. Configure as credenciais necessárias
 5. Ative o workflow
+
+## 🔧 Tecnologias
+
+- **N8N** - Automação de workflows
+- **Docker** - Execução local
+- **Google APIs** - Integrações Google
+- **Telegram Bot API** - Chatbot
+- **Slack API** - Notificações
 
 ---
 
