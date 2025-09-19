@@ -1,0 +1,215 @@
+{
+  "name": "Transcrever audio",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "triggerOn": "specificFolder",
+        "folderToWatch": {
+          "__rl": true,
+          "value": "17yJ3omXnikivojyxTfjy5zkLh4mFK5Yx",
+          "mode": "list",
+          "cachedResultName": "n8b",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/17yJ3omXnikivojyxTfjy5zkLh4mFK5Yx"
+        },
+        "event": "fileCreated",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDriveTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "518e9e1e-271e-4307-a470-11b3a112f891",
+      "name": "Google Drive Trigger",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "d97KGFSP9ExcYTWx",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        208,
+        0
+      ],
+      "id": "48eeba23-99e8-46ef-8410-ea671cea71ee",
+      "name": "Download file",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "d97KGFSP9ExcYTWx",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-1.5-pro-latest",
+          "mode": "list",
+          "cachedResultName": "models/gemini-1.5-pro-latest"
+        },
+        "audioUrls": "={{ $json.webContentLink }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "3c97f5af-20e5-47c8-9b0d-8f333d33ddcd",
+      "name": "Transcribe a recording",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "ZnCbIDEtsXaVqKJn",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-1.5-pro",
+          "mode": "list",
+          "cachedResultName": "models/gemini-1.5-pro"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=transcreva o audio , é uma musica, escreva na forma de versos  {{ $json.content.parts[0].text }}"
+            },
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        624,
+        0
+      ],
+      "id": "e3141db2-19aa-4802-876b-1134e7bcb495",
+      "name": "Message a model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "ZnCbIDEtsXaVqKJn",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pageId": {
+          "__rl": true,
+          "value": "https://www.notion.so/Welcome-to-Notion-27389136c65080cfbd3ce9368ff0fb99",
+          "mode": "url"
+        },
+        "title": "n8n teste transcricao",
+        "blockUi": {
+          "blockValues": [
+            {
+              "textContent": "={{ $json.content.parts[0].text }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        976,
+        0
+      ],
+      "id": "274283db-66a8-4a7a-87bf-164ab269fa97",
+      "name": "Create a page",
+      "credentials": {
+        "notionApi": {
+          "id": "Eij1nXMg7LX6wjmC",
+          "name": "Notion account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Google Drive Trigger": {
+      "main": [
+        [
+          {
+            "node": "Download file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download file": {
+      "main": [
+        [
+          {
+            "node": "Transcribe a recording",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transcribe a recording": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Create a page",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "72c3871d-5968-47a7-bb32-15734230a2df",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "c747472b29fbd39357c55eab3d3bbdbeee1f5742fabbe89829cf1ce44a2051f4"
+  },
+  "id": "fJDGu00LmxhgJ3rr",
+  "tags": []
+}

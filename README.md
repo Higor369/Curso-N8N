@@ -19,8 +19,11 @@ docker-compose up -d
 - **Monitoramento de Planilha** (`Modulo-1/Segundo workflow.json`)
 
 ### Módulo 2
-- **Chatbot Telegram** (`Modulo-2/chatbot telegram simples.json`)
+- **Chatbot Telegram** (`Modulo-2/Chatbot telegram simples.json`)
 - **Monitoramento Google Drive** (`Modulo-2/Google drive exercicio.json`)
+- **Google Drive + Notion** (`Modulo-2/Google drive e notion.json`)
+- **Resumo de Texto** (`Modulo-2/Resumo de texto.json`)
+- **Transcrever Áudio** (`Modulo-2/Transcrever audio.json`)
 
 ## 📖 Como Importar
 
