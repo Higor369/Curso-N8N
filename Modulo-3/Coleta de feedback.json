@@ -1,0 +1,189 @@
+{
+  "name": "Coleta de feedback",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "coleta de feedback ",
+        "formDescription": "forneça o seu feedback ",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Nome",
+              "placeholder": "Primeiro nome",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "email",
+              "fieldType": "email",
+              "placeholder": "seu email",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "função",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "sem função"
+                  },
+                  {
+                    "option": "com muita função"
+                  },
+                  {
+                    "option": "só o basico"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Feedback",
+              "fieldType": "textarea",
+              "placeholder": "Qual seu feedback",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "7ff40cf1-0895-4a0c-93ab-6360c64d1834",
+      "name": "On form submission",
+      "webhookId": "9885aee2-c45d-40fd-ab26-cd0159119786"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1fJIK6JT--qH86azypY9SdGqpiYm1v0bGD0pnFkPlDqs",
+          "mode": "list",
+          "cachedResultName": "coleta de feedback n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1fJIK6JT--qH86azypY9SdGqpiYm1v0bGD0pnFkPlDqs/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1fJIK6JT--qH86azypY9SdGqpiYm1v0bGD0pnFkPlDqs/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nome": "={{ $json.Nome }}",
+            "email": "={{ $json.email }}",
+            "função": "={{ $json['função'] }}",
+            "Feedback": "={{ $json.Feedback }}",
+            "submittedAt": "={{ $json.submittedAt }}",
+            "sssss": "s"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Nome",
+              "displayName": "Nome",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "função",
+              "displayName": "função",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Feedback",
+              "displayName": "Feedback",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "submittedAt",
+              "displayName": "submittedAt",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "sssss",
+              "displayName": "sssss",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        208,
+        0
+      ],
+      "id": "50e9562f-75b3-45bf-8356-f58c427392d8",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "t1rPzyWuvTkYOhpo",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "9411739e-86fa-4558-aca9-d90c16574ac3",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "0a19b4727d1fbd3a43ba819816b0ec8fb670b37b9cab4c0327aa0a3f9d162443"
+  },
+  "id": "86aE27XWVVZF1OlH",
+  "tags": []
+}
