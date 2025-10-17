@@ -31,6 +31,9 @@ docker-compose up -d
 - **Postagens LinkedIn** (`Modulo-3/Postagens Linkedin.json`) - Gerador automático de posts para LinkedIn com IA, geração de imagens e notificações por email
 - **Automação Veo3** (`Modulo-3/Veo3 automacao.json`) - Criação automática de vídeos com IA usando Veo3, inspirados em personagens bíblicos
 - **Ferramenta Think** (`Modulo-3/ferramenta think 1.json`) - Chat interativo com IA usando ferramenta Think para processamento avançado de conversas
+- **Gerador de Histórias** (`Modulo-3/Gerador de Historia.json`) - Criação automática de vídeos de histórias com IA usando OpenAI, Runway e ElevenLabs
+- **Postagem no YouTube** (`Modulo-3/Posatagem no youtube.json`) - Sistema automatizado de criação de posts para redes sociais baseado em vídeos do YouTube
+- **Criador de Conteúdo** (`Modulo-3/Criador de conteudo.json`) - Sistema automatizado de criação de conteúdo para LinkedIn, Facebook e blog com pesquisa web e IA
 
 ## 📖 Como Importar
 
@@ -49,8 +52,13 @@ docker-compose up -d
 - **OpenAI API** - IA para geração de conteúdo e imagens
 - **LinkedIn API** - Publicação automática de posts
 - **Veo3 API** - Geração de vídeos com IA
+- **Runway API** - Criação de vídeos com IA
+- **ElevenLabs API** - Geração de áudio com IA
+- **YouTube API** - Integração com YouTube
+- **Apify API** - Extração de dados web
 - **GNews & NewsAPI** - Busca de notícias
 - **Tavily API** - Pesquisa web avançada
+- **Notion API** - Integração com Notion
 
 ---
 
