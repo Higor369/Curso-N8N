@@ -35,6 +35,14 @@ docker-compose up -d
 - **Postagem no YouTube** (`Modulo-3/Posatagem no youtube.json`) - Sistema automatizado de criação de posts para redes sociais baseado em vídeos do YouTube
 - **Criador de Conteúdo** (`Modulo-3/Criador de conteudo.json`) - Sistema automatizado de criação de conteúdo para LinkedIn, Facebook e blog com pesquisa web e IA
 
+### Módulo 4
+- **N8N Minimax Hailou** (`Modulo-4/N8n minimax hailou.json`) - Sistema automatizado de geração de imagens com IA e conversão para vídeos usando Minimax Hailou
+- **Geração de Imagem para Banco** (`Modulo-4/Geração de imagem para banco.json`) - Sistema de processamento de imagens com IA para criação de metadados e organização em banco de dados
+- **Criar Design Camiseta** (`Modulo-4/Criar design camiseta.json`) - Workflow para análise de imagens de camisetas e geração de designs aprimorados com IA
+- **Criador de Vídeos YouTube** (`Modulo-4/Criador de videos youtube.json`) - Sistema completo de criação automatizada de vídeos para YouTube com IA, desde ideias até publicação
+- **Criar Propaganda** (`Modulo-4/Criar propaganda.json`) - Sistema de criação de anúncios publicitários com IA baseado em imagens de produtos
+- **Kling 2.1 + n8n** (`Modulo-4/Kling + n8n.json`) - Sistema completo de criação de vídeos com IA usando Kling 2.1, desde geração de prompts até publicação em redes sociais
+
 ## 📖 Como Importar
 
 1. Acesse `http://localhost:5678`
@@ -59,6 +67,12 @@ docker-compose up -d
 - **GNews & NewsAPI** - Busca de notícias
 - **Tavily API** - Pesquisa web avançada
 - **Notion API** - Integração com Notion
+- **Minimax Hailou API** - Geração de vídeos com IA
+- **Cloudinary API** - Armazenamento e processamento de imagens
+- **JSON2Video API** - Criação automatizada de vídeos
+- **Fal AI API** - Processamento de imagens e vídeos com IA
+- **Kling 2.1 API** - Geração de vídeos com IA a partir de imagens
+- **Blotato API** - Publicação automatizada em redes sociais (TikTok, YouTube, Facebook, LinkedIn)
 
 ---
 
