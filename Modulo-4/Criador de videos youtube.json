@@ -56,7 +56,7 @@
       "name": "Google Sheets",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "YOUR_GOOGLE_SHEETS_CREDENTIAL_ID",
+          "id": "RNwKb4ui91TeJRRZ",
           "name": "Google Sheets account"
         }
       }
@@ -103,7 +103,7 @@
       "name": "OpenAI Chat Model",
       "credentials": {
         "openAiApi": {
-          "id": "YOUR_OPENAI_CREDENTIAL_ID",
+          "id": "0qLMfnxIrfTptc0E",
           "name": "OpenAi account"
         }
       }
@@ -159,7 +159,7 @@
       "name": "Get Music",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "YOUR_GOOGLE_SHEETS_CREDENTIAL_ID",
+          "id": "RNwKb4ui91TeJRRZ",
           "name": "Google Sheets account"
         }
       }
@@ -476,7 +476,7 @@
       "name": "Error log",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "YOUR_GOOGLE_SHEETS_CREDENTIAL_ID",
+          "id": "RNwKb4ui91TeJRRZ",
           "name": "Google Sheets account"
         }
       }
@@ -658,7 +658,7 @@
       "name": "Get Video",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "YOUR_GOOGLE_SHEETS_CREDENTIAL_ID",
+          "id": "RNwKb4ui91TeJRRZ",
           "name": "Google Sheets account"
         }
       }
@@ -862,7 +862,7 @@
       "name": "Done",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "YOUR_GOOGLE_SHEETS_CREDENTIAL_ID",
+          "id": "RNwKb4ui91TeJRRZ",
           "name": "Google Sheets account"
         }
       }

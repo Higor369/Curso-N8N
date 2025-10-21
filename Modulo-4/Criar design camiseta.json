@@ -22,7 +22,7 @@
       "typeVersion": 4.2,
       "credentials": {
         "openAiApi": {
-          "id": "YOUR_OPENAI_CREDENTIAL_ID",
+          "id": "0qLMfnxIrfTptc0E",
           "name": "OpenAi account"
         }
       }
@@ -82,7 +82,7 @@
       "typeVersion": 1.8,
       "credentials": {
         "openAiApi": {
-          "id": "YOUR_OPENAI_CREDENTIAL_ID",
+          "id": "0qLMfnxIrfTptc0E",
           "name": "OpenAi account"
         }
       }
@@ -106,7 +106,7 @@
       "typeVersion": 1.2,
       "credentials": {
         "openAiApi": {
-          "id": "YOUR_OPENAI_CREDENTIAL_ID",
+          "id": "0qLMfnxIrfTptc0E",
           "name": "OpenAi account"
         }
       }
@@ -246,7 +246,7 @@
       "name": "Google Drive",
       "credentials": {
         "googleDriveOAuth2Api": {
-          "id": "YOUR_GOOGLE_DRIVE_CREDENTIAL_ID",
+          "id": "j1qmlnVLtaZkr0cm",
           "name": "Google Drive account 5"
         }
       }

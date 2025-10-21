@@ -67,7 +67,7 @@
       "name": "Google Sheets",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "YOUR_GOOGLE_SHEETS_CREDENTIAL_ID",
+          "id": "RNwKb4ui91TeJRRZ",
           "name": "Google Sheets account 3"
         }
       }

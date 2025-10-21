@@ -63,7 +63,7 @@
       "name": "Search for Images",
       "credentials": {
         "googleDriveOAuth2Api": {
-          "id": "YOUR_GOOGLE_DRIVE_CREDENTIAL_ID",
+          "id": "j1qmlnVLtaZkr0cm",
           "name": "Google Drive account 5"
         }
       }
@@ -88,7 +88,7 @@
       "name": "Download Images",
       "credentials": {
         "googleDriveOAuth2Api": {
-          "id": "YOUR_GOOGLE_DRIVE_CREDENTIAL_ID",
+          "id": "j1qmlnVLtaZkr0cm",
           "name": "Google Drive account 5"
         }
       }
@@ -117,7 +117,7 @@
       "name": "Create Title & Keywords",
       "credentials": {
         "openAiApi": {
-          "id": "YOUR_OPENAI_CREDENTIAL_ID",
+          "id": "0qLMfnxIrfTptc0E",
           "name": "OpenAi account"
         }
       }
@@ -210,7 +210,7 @@
       "name": "Google Sheets",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "YOUR_GOOGLE_SHEETS_CREDENTIAL_ID",
+          "id": "RNwKb4ui91TeJRRZ",
           "name": "Google Sheets account 3"
         }
       }
@@ -235,7 +235,7 @@
       "name": "Google Drive",
       "credentials": {
         "googleDriveOAuth2Api": {
-          "id": "YOUR_GOOGLE_DRIVE_CREDENTIAL_ID",
+          "id": "j1qmlnVLtaZkr0cm",
           "name": "Google Drive account 5"
         }
       }
@@ -284,7 +284,7 @@
       "name": "Clear Sheet",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "YOUR_GOOGLE_SHEETS_CREDENTIAL_ID",
+          "id": "RNwKb4ui91TeJRRZ",
           "name": "Google Sheets account 3"
         }
       }

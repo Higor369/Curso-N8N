@@ -37,7 +37,7 @@
       "name": "OpenAI Chat Model",
       "credentials": {
         "openAiApi": {
-          "id": "YOUR_OPENAI_CREDENTIAL_ID",
+          "id": "0qLMfnxIrfTptc0E",
           "name": "OpenAi account 4"
         }
       }
@@ -63,11 +63,11 @@
       "name": "Create Image",
       "credentials": {
         "httpHeaderAuth": {
-          "id": "YOUR_HEADER_AUTH_CREDENTIAL_ID",
+          "id": "dt2R6spQJ1yfwttA",
           "name": "Tavily"
         },
         "openAiApi": {
-          "id": "YOUR_OPENAI_CREDENTIAL_ID",
+          "id": "0qLMfnxIrfTptc0E",
           "name": "OpenAi account 3"
         }
       }
@@ -155,7 +155,7 @@
       "name": "Image to Video",
       "credentials": {
         "httpHeaderAuth": {
-          "id": "YOUR_HEADER_AUTH_CREDENTIAL_ID",
+          "id": "dt2R6spQJ1yfwttA",
           "name": "Header Auth account 6"
         }
       }
@@ -313,7 +313,7 @@
       "name": "Save Information",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "YOUR_GOOGLE_SHEETS_CREDENTIAL_ID",
+          "id": "RNwKb4ui91TeJRRZ",
           "name": "Google Sheets account 3"
         }
       }
