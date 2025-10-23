@@ -43,6 +43,17 @@ docker-compose up -d
 - **Criar Propaganda** (`Modulo-4/Criar propaganda.json`) - Sistema de criação de anúncios publicitários com IA baseado em imagens de produtos
 - **Kling 2.1 + n8n** (`Modulo-4/Kling + n8n.json`) - Sistema completo de criação de vídeos com IA usando Kling 2.1, desde geração de prompts até publicação em redes sociais
 
+### Módulo 5
+- **Analisador de Faturas** (`Modulo-5/Analisador de faturas.json`) - Sistema automatizado de análise de faturas PDF recebidas por email, extração de dados com IA e organização em banco de dados Notion
+- **Análise de Currículo** (`Modulo-5/Analise de curriculo.json`) - Sistema de análise automática de currículos com IA, extração de informações e avaliação de candidatos para vagas
+- **Controle de Despesas** (`Modulo-5/Controle de Despesas.json`) - Sistema de controle financeiro com chat interativo para registro de despesas e receitas usando IA
+- **Formulário de Onboarding** (`Modulo-5/Fomulario de onboarding.json`) - Sistema automatizado de onboarding de clientes com formulário web, geração de emails personalizados e registro em planilhas
+- **Organizador de Emails** (`Modulo-5/Organizador de emails.json`) - Sistema inteligente de organização automática de emails com IA, categorização e aplicação de labels no Gmail
+- **Alerta de Novos Vídeos YouTube** (`Modulo-5/Alerta de novos videos youtube.json`) - Sistema de monitoramento automático de canais do YouTube com notificações por email e Telegram
+- **Gerador de Ideias** (`Modulo-5/Gerador de ideias.json`) - Sistema automatizado de geração de ideias de negócios baseado em posts do Reddit com IA
+- **Agente Imobiliário** (`Modulo-5/Agente Imobiliario.json`) - Sistema de busca e análise de propriedades imobiliárias com integração a APIs de imóveis
+- **Resumo de Faturas** (`Modulo-5/Resume faturas.json`) - Sistema automatizado de processamento e resumo de faturas com IA e organização em banco de dados
+
 ## 📖 Como Importar
 
 1. Acesse `http://localhost:5678`
