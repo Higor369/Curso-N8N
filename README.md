@@ -54,6 +54,11 @@ docker-compose up -d
 - **Agente Imobiliário** (`Modulo-5/Agente Imobiliario.json`) - Sistema de busca e análise de propriedades imobiliárias com integração a APIs de imóveis
 - **Resumo de Faturas** (`Modulo-5/Resume faturas.json`) - Sistema automatizado de processamento e resumo de faturas com IA e organização em banco de dados
 
+### Módulo 6
+- **Agendamento com IA** (`Modulo-6/Agendamente com IA.json`) - Sistema inteligente de agendamento com IA usando DeepSeek, integração com Gmail e Google Calendar para automação de compromissos
+- **Day Trade IA** (`Modulo-6/Day trade IA.json`) - Sistema automatizado de análise de trading com IA, coleta de dados financeiros em tempo real, análise de sentimentos de notícias e recomendações de investimento via Telegram
+- **Planejamento com WhatsApp** (`Modulo-6/Planejamento com whatsapp.json`) - Sistema de planejamento inteligente via WhatsApp com IA, pesquisa web automatizada e geração de planos de ação personalizados
+
 ## 📖 Como Importar
 
 1. Acesse `http://localhost:5678`
@@ -84,6 +89,12 @@ docker-compose up -d
 - **Fal AI API** - Processamento de imagens e vídeos com IA
 - **Kling 2.1 API** - Geração de vídeos com IA a partir de imagens
 - **Blotato API** - Publicação automatizada em redes sociais (TikTok, YouTube, Facebook, LinkedIn)
+- **DeepSeek API** - IA avançada para agendamento e planejamento inteligente
+- **TwelveData API** - Dados financeiros em tempo real para análise de trading
+- **NewsAPI** - Busca e análise de notícias para sentimentos de mercado
+- **Groq API** - Processamento rápido de IA para planejamento
+- **SerpAPI** - Pesquisa web avançada para localização de serviços
+- **WhatsApp Business API** - Integração com WhatsApp para automação de mensagens
 
 ---
 
