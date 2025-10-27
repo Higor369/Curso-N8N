@@ -59,6 +59,15 @@ docker-compose up -d
 - **Day Trade IA** (`Modulo-6/Day trade IA.json`) - Sistema automatizado de análise de trading com IA, coleta de dados financeiros em tempo real, análise de sentimentos de notícias e recomendações de investimento via Telegram
 - **Planejamento com WhatsApp** (`Modulo-6/Planejamento com whatsapp.json`) - Sistema de planejamento inteligente via WhatsApp com IA, pesquisa web automatizada e geração de planos de ação personalizados
 
+### Módulo 7 - Agentes de IA Avançados
+- **Agente Supervisor** (`Modulo-7/Agente supervisor.json`) - Supervisor central que coordena múltiplos agentes especializados, processa mensagens de texto e áudio via Telegram, transcreve áudio e gera respostas com IA
+- **Agente de Pesquisa** (`Modulo-7/Agente pesquisa.json`) - Assistente de pesquisa com acesso a Wikipedia e SerpAPI, fornece respostas baseadas em evidências de múltiplas fontes
+- **Agente de Email** (`Modulo-7/Agente email.json`) - Gerenciamento automatizado de emails com IA, envia emails personalizados e busca/filtra emails por remetente
+- **Agente de Calendário** (`Modulo-7/Agente calendario.json`) - Gerenciamento inteligente de agenda e eventos, cria eventos com/sem participantes e busca eventos por período
+- **Agente de Vendas com Intervenção Humana** (`Modulo-7/Agente de venda com intervenção humana.json`) - Sistema de vendas semi-automatizado com aprovação humana, processa leads do Airtable e gera emails personalizados
+- **Produção de Vídeos TikTok** (`Modulo-7/Producao de videos tiktok.json`) - Geração automatizada de conteúdo visual para TikTok com 40 estilos diferentes, criação de prompts e produção de vídeos com narração
+- **Criador de Vídeos POV** (`Modulo-7/Criador de videos POV.json`) - Criação automatizada de vídeos em primeira pessoa, lê ideias de planilhas, gera scripts e produz vídeos com narração
+
 ## 📖 Como Importar
 
 1. Acesse `http://localhost:5678`
@@ -95,6 +104,10 @@ docker-compose up -d
 - **Groq API** - Processamento rápido de IA para planejamento
 - **SerpAPI** - Pesquisa web avançada para localização de serviços
 - **WhatsApp Business API** - Integração com WhatsApp para automação de mensagens
+- **Anthropic Claude API** - IA avançada para agentes de vendas e revisão de conteúdo
+- **Google Gemini API** - IA multimodal para classificação de feedback e análise
+- **Airtable API** - Gerenciamento de leads e projetos com intervenção humana
+- **RunwayML API** - Geração avançada de vídeos com IA para conteúdo POV e TikTok
 
 ---
 
