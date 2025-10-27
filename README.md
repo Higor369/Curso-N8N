@@ -67,6 +67,8 @@ docker-compose up -d
 - **Agente de Vendas com Intervenção Humana** (`Modulo-7/Agente de venda com intervenção humana.json`) - Sistema de vendas semi-automatizado com aprovação humana, processa leads do Airtable e gera emails personalizados
 - **Produção de Vídeos TikTok** (`Modulo-7/Producao de videos tiktok.json`) - Geração automatizada de conteúdo visual para TikTok com 40 estilos diferentes, criação de prompts e produção de vídeos com narração
 - **Criador de Vídeos POV** (`Modulo-7/Criador de videos POV.json`) - Criação automatizada de vídeos em primeira pessoa, lê ideias de planilhas, gera scripts e produz vídeos com narração
+- **MCP com N8N** (`Modulo-7/MCP com n8n.json`) - Sistema de Model Context Protocol integrado com N8N, permite comunicação entre agentes de IA e ferramentas externas via MCP Server
+- **Gerador de Imagens Virais** (`Modulo-7/Gerador de imagens virais.json`) - Sistema automatizado de criação de conteúdo viral para redes sociais, pesquisa de notícias de IA, geração de imagens e publicação em múltiplas plataformas
 
 ## 📖 Como Importar
 
@@ -108,6 +110,9 @@ docker-compose up -d
 - **Google Gemini API** - IA multimodal para classificação de feedback e análise
 - **Airtable API** - Gerenciamento de leads e projetos com intervenção humana
 - **RunwayML API** - Geração avançada de vídeos com IA para conteúdo POV e TikTok
+- **MCP (Model Context Protocol)** - Protocolo para comunicação entre agentes de IA e ferramentas externas
+- **Perplexity API** - Pesquisa web avançada com IA para coleta de informações em tempo real
+- **Cloudinary API** - Armazenamento e processamento de imagens na nuvem
 
 ---
 
