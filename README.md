@@ -70,6 +70,13 @@ docker-compose up -d
 - **MCP com N8N** (`Modulo-7/MCP com n8n.json`) - Sistema de Model Context Protocol integrado com N8N, permite comunicação entre agentes de IA e ferramentas externas via MCP Server
 - **Gerador de Imagens Virais** (`Modulo-7/Gerador de imagens virais.json`) - Sistema automatizado de criação de conteúdo viral para redes sociais, pesquisa de notícias de IA, geração de imagens e publicação em múltiplas plataformas
 
+### Módulo 8 - Sistemas Avançados e Banco de Dados
+- **Agente de Viagem** (`Modulo-8/Agente de viagem.json`) - Sistema completo de planejamento de viagens com IA, busca de voos, hotéis e atividades, geração de emails personalizados com itinerários detalhados
+- **Clínica de Fisioterapia** (`Modulo-8/clinica de fisioterapia.json`) - Sistema automatizado de agendamento e gestão de clínicas, processamento de transcrições de chamadas e envio de confirmações por email
+- **Fluxo de Vetorização** (`Modulo-8/Fluxo de vetorização.json`) - Sistema de processamento e vetorização de documentos do Google Drive para banco de dados Pinecone, com divisão de texto e embeddings
+- **Agente Eleven Labs** (`Modulo-8/Agente eleven labs.json`) - Agente especializado em instalação de painéis solares com acesso a base de conhecimento vetorizada via Pinecone e respostas inteligentes
+- **Conexões de Banco de Dados** (`Modulo-8/Conexões de banco de dados.json`) - Sistema RAG (Retrieval-Augmented Generation) com memória persistente em PostgreSQL, integração com Supabase e carregamento de documentos do Google Drive
+
 ## 📖 Como Importar
 
 1. Acesse `http://localhost:5678`
@@ -113,6 +120,12 @@ docker-compose up -d
 - **MCP (Model Context Protocol)** - Protocolo para comunicação entre agentes de IA e ferramentas externas
 - **Perplexity API** - Pesquisa web avançada com IA para coleta de informações em tempo real
 - **Cloudinary API** - Armazenamento e processamento de imagens na nuvem
+- **Pinecone API** - Banco de dados vetorial para armazenamento e busca de embeddings
+- **Supabase API** - Backend-as-a-Service com banco de dados PostgreSQL e funcionalidades de vetorização
+- **PostgreSQL** - Banco de dados relacional para armazenamento de memória persistente de conversas
+- **Tavily API** - Pesquisa web avançada para coleta de informações sobre atividades e destinos
+- **SerpAPI** - Busca de voos e hotéis via Google Flights e Google Hotels
+- **Anthropic Claude API** - IA avançada para geração de emails personalizados e processamento de linguagem natural
 
 ---
 
